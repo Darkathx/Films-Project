@@ -16,7 +16,7 @@
                     <h3>Films Project</h3>
                 </div>
             </div>
-            <div>
+            <div id="form-body">
             <form class="form">
                 <div class="form-group">
                     <input type="text" class="form-control" id="film-name" placeholder="Film Name" required>
@@ -29,6 +29,7 @@
                 </div>
                 <button type="submit" class="btn btn-default" id="addFilm">Add Film</button>
             </form>
+            <hr>
             </div>
             <hr>
             <div class="row">
@@ -53,9 +54,11 @@
                     </tbody>
                 </table>
             </div>
-
         </div>
-        <div></div>
+        <div>
+            <hr>
+            <button type="submit" class="btn btn-primary" id="eraseAll">Erase All Films</button>
+        </div>
 
         <script src="UI.js"></script>
         <script src="Film.js"></script>
