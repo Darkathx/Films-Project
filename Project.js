@@ -3,6 +3,7 @@ const titleElement = document.querySelector("#film-name");
 const directorElement = document.querySelector("#director");
 const urlElement = document.querySelector("#photo-link");
 const filmBody = document.getElementById("Films");
+const eraseAll = document.querySelector("#eraseAll");
 
 const ui = new UI();
 const storage = new Storage();
@@ -15,6 +16,7 @@ function eventListeners() {
         ui.loadAllFilms(films);
     });
     filmBody.addEventListener("click", eraseFilm);
+    eraseAll.addEventListener("click", eraseAllFilms);
 }
 function addFilm(e) {
 
@@ -37,4 +39,9 @@ function eraseFilm(e) {
         storage.eraseFilmFromStorage(e.target.parentElement.previousElementSibling.previousElementSibling.textContent);
         ui.displayMessages("Film Erased!", "success");
     }
+}
+
+function eraseAllFilms(e) {
+    ui.eraseAllFilmsFromUI();
+    storage.eraseAllFilmsFromStorage();
 }

@@ -39,4 +39,9 @@ class UI {
     eraseFilmFromUI(link) {
         link.parentElement.parentElement.remove();
     }
+
+    eraseAllFilmsFromUI() {
+        const filmList = document.getElementById("Films");
+        filmList.textContent = "";
+    }
 }

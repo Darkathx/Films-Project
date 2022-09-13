@@ -24,4 +24,7 @@ class Storage {
         localStorage.setItem("films", JSON.stringify(myFilms));
     }
     
+    eraseAllFilmsFromStorage() {
+        localStorage.setItem("films", JSON.stringify([]));
+    }
 }
